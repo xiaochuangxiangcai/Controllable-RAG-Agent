@@ -120,6 +120,7 @@ desktop.ini
 .conda/
 *.conda
 *.ipynb
+!TechSupport-Agent.ipynb
 
 # Environments
 .env
