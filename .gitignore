@@ -135,3 +135,29 @@ docs/
 output/
 *.pdf 
 helper_functions.py
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# venv
+.venv/
+venv/
+env/
+
+# VSCode / IDE
+.vscode/
+.idea/
+
+# 向量库（所有本地 FAISS 索引）
+vectordb/
+book_quotes_vectorstore/
+chapter_summaries_vector_store/
+chunks_vector_store/
+*.faiss
+*.pkl
+
+# Jupyter 检查点
+.ipynb_checkpoints/
+

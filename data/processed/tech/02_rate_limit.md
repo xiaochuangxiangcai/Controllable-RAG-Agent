@@ -1,0 +1,21 @@
+---
+domain: tech
+product: deepseek-api
+section: rate_limit
+source_url: https://api-docs.deepseek.com/zh-cn/quick_start/rate_limit
+language: zh
+---
+
+
+# 限速
+
+DeepSeek API **不限制用户并发量**，我们会尽力保证您所有请求的服务质量。
+
+但请注意，当我们的服务器承受高流量压力时，您的请求发出后，可能需要等待一段时间才能获取服务器的响应。在这段时间里，您的 HTTP 请求会保持连接，并持续收到如下格式的返回内容：
+
+* 非流式请求：持续返回空行
+* 流式请求：持续返回 SSE keep-alive 注释（`: keep-alive`）
+
+这些内容不影响 OpenAI SDK 对响应的 JSON body 的解析。如果您在自己解析 HTTP 响应，请注意处理这些空行或注释。
+
+如果 30 分钟后，请求仍未完成，服务器将关闭连接。
